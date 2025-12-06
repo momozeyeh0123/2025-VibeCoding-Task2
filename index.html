@@ -305,6 +305,38 @@ footer.site-footer{
   .hero-title{font-size:2.4rem}
   .container{padding-left:24px; padding-right:24px}
 }
+
+/* ===== FIX: 防止任何水平溢出 ===== */
+html, body {
+  overflow-x: hidden;
+}
+
+/* 確保所有區塊不會超過螢幕寬 */
+* {
+  max-width: 100%;
+}
+
+/* 修正 flex row 卡片在小螢幕被撐爆 */
+.project-card,
+.hero-row {
+  min-width: 0;
+}
+
+/* 修正 grid 超寬情況 */
+.hero-inner,
+.about-grid,
+.projects-grid {
+  min-width: 0;
+}
+
+/* 避免圖片產生 overflow */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* CSS:RWD-END */
 </style> </head> <body> <div class="page"> <header class="site-header"> <div class="container nav" role="navigation" aria-label="主導覽列"> <div class="brand" aria-hidden="false">Your Name · Frontend Dev</div> <nav class="nav-links" aria-label="主要區塊連結"> <a class="nav-link" href="#hero">首頁</a> <a class="nav-link" href="#about">關於我</a> <a class="nav-link" href="#skills">技能</a> <a class="nav-link" href="#projects">作品集</a> <a class="nav-link" href="#contact">聯絡我</a> </nav> </div> </header>
 
